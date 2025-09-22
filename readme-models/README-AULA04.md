@@ -112,4 +112,4 @@ Para validar cada palavra, rastreamos sua computação através do autômato, co
 ---
 
 ## 📎 Materiais da Aula
--   [**PDF da Aula 4**](slides/Aula04_Chomsky-GramaticasRegulares.pdf)
+-   [**PDF da Aula 4 - Hierarquia de Chomsky e Gramáticas Regulares**](slides/Aula04_Chomsky-GramaticasRegulares.pdf)
