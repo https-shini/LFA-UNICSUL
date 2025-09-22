@@ -88,3 +88,6 @@ graph TD
     style 8 fill:#F79327,stroke:#BF5A00,stroke-width:4px
     end
 ```
+## 📎 Materiais da Aula
+-   [**PDF da Aula 5 - Conversão de Expressões Regulares (ER) para AFN/AFD**](slides/Aula05_ER-AFNe.pdf)
+
