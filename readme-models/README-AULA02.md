@@ -59,4 +59,4 @@ Uma subpalavra é qualquer sequência contígua de símbolos.
 ---
 
 ## 📎 Materiais da Aula
--   [**PDF da Aula 2**](slides/Aula02_Prefixo-Sufixo-Subpalavra.pdf)
+-   [**PDF da Aula 2 - Conceitos Iniciais e Grafos**](slides/Aula02_Prefixo-Sufixo-Subpalavra.pdf)
