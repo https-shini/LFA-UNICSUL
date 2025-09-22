@@ -1,185 +1,73 @@
-# Análise do Material: Linguagens Formais e Autômatos
+<h1 align="center">🧠 Linguagens Formais e Autômatos (LFA)</h1>
 
-## Introdução
-Este documento apresenta uma análise consolidada do material fornecido sobre Linguagens Formais e Autômatos. O conteúdo abrange desde conceitos fundamentais de linguagens formais, como símbolos, alfabetos e palavras, até tópicos mais avançados como a Hierarquia de Chomsky, Expressões Regulares, Autômatos Finitos Determinísticos (AFD) e Não Determinísticos (AFN), Gramáticas Livres de Contexto (GLC) e métodos de análise sintática. O objetivo é fornecer uma compreensão abrangente dos princípios teóricos e aplicações práticas desses conceitos na ciência da computação.
+<p align="center">
+  <a href="#-sobre-a-disciplina">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-conteúdo-programático">Conteúdo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-aulas-e-recursos">Aulas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">Licença</a>
+</p>
 
-## Conceitos Fundamentais de Linguagens Formais
+## 📖 Sobre a disciplina
+A disciplina de **Linguagens Formais e Autômatos** explora os modelos matemáticos e as teorias que formam a base da ciência da computação. O curso aprofunda a compreensão de como as linguagens, tanto naturais quanto de programação, podem ser definidas, estruturadas e processadas por máquinas, com aplicações diretas em áreas como o desenvolvimento de compiladores e a inteligência artificial.
 
-A teoria das linguagens formais, proposta inicialmente na década de 1950, estuda modelos matemáticos para a especificação e reconhecimento de linguagens, tanto naturais quanto artificiais. Suas aplicações são vastas, incluindo modelagem de circuitos lógicos, sistemas de animação, hipertextos, hipermídias, reconhecimento de padrões e, crucialmente, na análise léxica e sintática de linguagens de programação.
+### 🎯 Objetivos de aprendizagem
+- **Cognitivos:** Compreender as definições e propriedades de modelos computacionais como linguagens, autômatos e gramáticas.
+- **Habilidades:** Ser capaz de especificar linguagens usando autômatos e gramáticas, além de correlacionar a teoria com aplicações práticas na computação.
+- **Atitudes:** Desenvolver um pensamento abstrato, analítico e criativo para a solução de problemas complexos.
 
-Os elementos básicos que compõem as linguagens formais são:
+**Professor:** Prof. Jose Claudio Sousa <br>
+**Curso:** Ciência da Computação – Universidade Cruzeiro do Sul
 
-*   **Símbolos:** Entidades abstratas e indivisíveis (caracteres, dígitos) que servem como blocos construtivos. Podem ser ordenados.
-*   **Alfabeto (Σ):** Um conjunto finito de símbolos. Exemplos incluem `{0,1}` para binários ou `{a,b,c}`. Um alfabeto pode ser vazio.
-*   **Sentença (ou Palavra):** Uma sequência finita de símbolos de um alfabeto. Pode ser vazia (ε).
-*   **Tamanho de uma Sentença (|w|):** O número de símbolos em uma sentença.
-*   **Linguagem:** Um conjunto de sentenças válidas, definidas por um conjunto de símbolos e regras.
-*   **Gramática:** Um conjunto finito de regras que governam a formação de sentenças em uma linguagem, atuando como um mecanismo gerador.
+---
 
-Operações comuns com palavras incluem:
+## 📚 Conteúdo programático
+O conteúdo da disciplina é organizado de forma a construir o conhecimento de maneira progressiva, partindo dos conceitos básicos até a Hierarquia de Chomsky e a análise sintática.
 
-*   **Prefixo:** Sequência inicial de símbolos.
-*   **Sufixo:** Sequência final de símbolos.
-*   **Subpalavra:** Qualquer sequência contígua de símbolos (inclui prefixos e sufixos).
-*   **Concatenação:** Junção de duas palavras. É uma operação associativa.
-*   **Potência em Palavra (w^n):** Concatenação sucessiva de uma palavra `n` vezes. `w^0 = ε`.
-*   **Fecho de Kleene (Σ*):** O conjunto de todas as palavras possíveis sobre um alfabeto Σ, incluindo a palavra vazia.
-*   **Fecho Positivo (Σ+):** O conjunto de todas as palavras possíveis sobre um alfabeto Σ, excluindo a palavra vazia.
-*   **Cadeia Reversa (w^R):** A sequência de símbolos de uma palavra na ordem inversa.
+1.  **Unidades 1-2:** Fundamentos de Linguagens Formais, Palavras, Grafos e Expressões Regulares.
+2.  **Unidades 3-4:** Autômatos Finitos (AFD e AFN) e a Hierarquia de Chomsky.
+3.  **Unidades 5-6:** Gramáticas Livres de Contexto (GLC) e Algoritmos de Análise Sintática.
+4.  **Unidades 7+:** Linguagens Recursivamente Enumeráveis, Máquinas de Turing e Avaliações.
 
-## Grafos
+---
 
-O material também introduz o conceito de grafos, que são estruturas matemáticas compostas por vértices (nós) e arestas (ligações). Eles podem ser representados graficamente ou formalmente como `G = (V, E)`.
+## 📝 Aulas e Recursos
+As aulas a seguir formam a espinha dorsal do curso, cobrindo os tópicos essenciais da disciplina.
 
-*   **Grafo Não-Direcionado:** Arestas não possuem um sentido específico (ex: {1,2} é o mesmo que {2,1}).
-*   **Grafo Direcionado:** Arestas possuem um sentido (pares ordenados, ex: (1,2) é diferente de (2,1)), representadas por setas.
-*   **Grau de um Nó:** Número de arestas conectadas a um nó.
-*   **Subgrafo:** Um grafo contido em outro.
-*   **Caminho:** Uma sequência de nós conectados por arestas.
-    *   **Caminho Simples:** Não repete nós.
-    *   **Ciclo:** Um caminho que começa e termina no mesmo nó.
-    *   **Ciclo Simples:** Um ciclo com pelo menos três nós que não repete nós, exceto o inicial/final.
-*   **Grafo Conexo:** Existe um caminho entre quaisquer dois nós.
-*   **Grafo Fortemente Conexo:** Em grafos direcionados, existe um caminho direcionado em ambos os sentidos entre quaisquer dois nós.
-*   **Árvore:** Um grafo conexo sem ciclos simples, com um nó raiz e nós folha (grau 1, exceto a raiz).
+### 📝 **Aula 1: Apresentação e Visão Geral**
+Apresentação da disciplina, incluindo ementa, objetivos, metodologia de ensino, sistema de avaliação e bibliografia. Este material define o escopo do curso e as expectativas de aprendizado.
 
-## Expressões Regulares (ER) e Autômatos Finitos (AF)
+👉 [Acessar o conteúdo completo da Aula 1.](slides/Aula01_Apresentacao_LFA.pdf)
 
-Expressões Regulares são formalismos denotacionais usados para descrever linguagens regulares. As operações básicas de ER incluem união (`r U s`), concatenação (`r.s`) e o Fecho de Kleene (`r*`).
+### 📝 **Aula 2: Conceitos Iniciais e Grafos**
+Introdução aos elementos fundamentais da teoria de linguagens formais, como **símbolos**, **alfabetos**, **palavras** e **linguagens**. A aula também detalha operações como **prefixo**, **sufixo**, **subpalavra**, **concatenação** e **potência**. A seção final introduz a **teoria de grafos**, que será utilizada como base para a representação de autômatos.
 
-Autômatos são modelos matemáticos que reconhecem linguagens. Eles são sistemas de estados finitos, compostos por estados e transições. Podem ser:
+👉 [Acessar o conteúdo completo da Aula 2.](slides/Aula02_Prefixo-Sufixo-Subpalavra.pdf)
 
-*   **Determinísticos (AFD):** Para cada estado e símbolo de entrada, há uma única transição para um próximo estado.
-*   **Não Determinísticos (AFN):** Para cada estado e símbolo de entrada, pode haver múltiplas transições ou transições vazias (ε-transições).
+### 📝 **Aula 3: Expressões Regulares e Autômatos Finitos Determinísticos (AFD)**
+Foco nos mecanismos de descrição e reconhecimento de linguagens. A aula define **Expressões Regulares (ER)** como um formalismo para descrever linguagens regulares. Em seguida, introduz **Autômatos Finitos (AF)** como modelos matemáticos para reconhecer essas linguagens. O **Autômato Finito Determinístico (AFD)** é formalizado como uma 5-tupla `M = (Σ, Q, δ, q0, F)`, com seus componentes e regras de computação.
 
-Um **Autômato Finito Determinístico (AFD)** é formalmente definido por uma 5-tupla `M = (Σ, Q, δ, q0, F)`, onde:
+👉 [Acessar o conteúdo completo da Aula 3.](slides/Aula03_ER-AFD.pdf)
 
-*   `Σ`: Alfabeto de entrada.
-*   `Q`: Conjunto finito de estados.
-*   `δ`: Função de transição.
-*   `q0`: Estado inicial.
-*   `F`: Conjunto de estados finais.
+### 📝 **Aula 4: Hierarquia de Chomsky e Gramáticas Regulares**
+Esta aula apresenta a **Hierarquia de Chomsky**, uma classificação fundamental das gramáticas formais. Aprofunda-se no **Tipo 3: Gramáticas Regulares**, explicando o formato de suas produções e a relação com as Linguagens Regulares e Autômatos Finitos. Os outros tipos da hierarquia (Tipo 2, 1 e 0) são brevemente apresentados para contextualização.
 
-AFDs processam palavras lendo símbolos da esquerda para a direita. Uma palavra é **aceita** se o autômato termina em um estado final após processar todos os símbolos; caso contrário, é **rejeitada**.
+👉 [Acessar o conteúdo completo da Aula 4.](slides/Aula04_Chomsky-GramaticasRegulares.pdf)
 
-A relação entre ERs e AFDs é fundamental: qualquer linguagem descrita por uma ER pode ser reconhecida por um AFD, e vice-versa. A conversão de ER para AFD geralmente envolve uma etapa intermediária de construção de um AFN (usando a Construção de Thompson) e, em seguida, a conversão do AFN para AFD (usando o Método da Construção de Subconjuntos).
+### 📝 **Aula 5: Conversão de Expressões Regulares (ER) para AFN/AFD**
+Explora a relação prática entre Expressões Regulares e Autômatos Finitos. A aula detalha dois algoritmos cruciais: a **Construção de Thompson**, que traduz uma ER para um Autômato Finito Não Determinístico (AFN) com ε-transições, e o **Método da Construção de Subconjuntos**, que converte um AFN para um AFD equivalente.
 
-## Hierarquia de Chomsky
+👉 [Acessar o conteúdo completo da Aula 5.](slides/Aula05_ER-AFNe.pdf)
 
-A Hierarquia de Chomsky classifica gramáticas formais e as linguagens que elas geram em quatro tipos, do mais restritivo ao mais geral, cada um com regras de produção específicas e um tipo de autômato correspondente:
+### 📝 **Aula 6: Gramáticas Livres de Contexto (GLC) e Análise Sintática**
+Foco no **Tipo 2: Gramáticas Livres de Contexto (GLC)**, essenciais para a definição de linguagens de programação. O material introduz conceitos como **Árvore de Derivação**, **Árvore Sintática Abstrata (AST)** e **Gramáticas Ambíguas**. Por fim, são explicadas as estratégias de análise sintática **Top-Down** e **Bottom-Up**, com um exemplo detalhado do algoritmo **LL(1)**.
 
-*   **Tipo 3: Gramáticas Regulares:**
-    *   **Produções:** `A → aB` ou `A → a` (lineares à direita/esquerda).
-    *   **Linguagens:** Regulares.
-    *   **Reconhecedor:** Autômatos Finitos (AFD/AFN).
-    *   **Importância:** Verificação de protocolos.
+👉 [Acessar o conteúdo completo da Aula 6.](slides/Aula06_GLC.pdf)
 
-*   **Tipo 2: Gramáticas Livres de Contexto (GLC):**
-    *   **Produções:** `A → γ` (onde `A` é não-terminal e `γ` é uma cadeia de terminais/não-terminais).
-    *   **Linguagens:** Livres de Contexto.
-    *   **Reconhecedor:** Autômatos com Pilha (AP).
-    *   **Importância:** Análise sintática em compiladores.
+---
 
-*   **Tipo 1: Gramáticas Sensíveis ao Contexto:**
-    *   **Produções:** `αAβ → αγβ` (com `γ ≠ ε` e `α, β` como contextos fixos).
-    *   **Linguagens:** Sensíveis ao Contexto.
-    *   **Reconhecedor:** Autômatos Linearmente Limitados (ALL).
+## 📄 Licença
+Todo o material deste repositório está sob a **Licença MIT**. Consulte o arquivo `LICENSE` para mais detalhes sobre permissões e restrições.
 
-*   **Tipo 0: Gramáticas com Estruturas de Frase (Irrestritas):**
-    *   **Produções:** `α → β` (com `α ≠ ε`).
-    *   **Linguagens:** Recursivamente Enumeráveis.
-    *   **Reconhecedor:** Máquinas de Turing (MT).
-    *   **Importância:** Problemas gerais de Inteligência Artificial.
+---
 
-## Gramáticas Livres de Contexto (GLC) e Análise Sintática
-
-As GLCs são cruciais para a definição de linguagens de programação. Elas são formalmente definidas por `G(V, T, P, S)` (Não Terminais, Terminais, Produções, Símbolo Inicial).
-
-*   **Árvore de Derivação (Árvore Sintática):** Representação gráfica das derivações de uma GLC, mostrando a estrutura hierárquica de uma sentença. A raiz é o símbolo inicial, nós internos são não-terminais e folhas são terminais.
-*   **Árvore Sintática Abstrata (AST):** Uma forma de árvore de derivação onde operadores e palavras-chave são nós internos, não folhas.
-*   **Gramática Ambígua:** Uma gramática é ambígua se uma mesma palavra pode ter duas ou mais árvores de derivação distintas.
-*   **Notação BNF (Backus-Naur Form):** Uma forma padrão de representar GLCs, usando `< >` para não-terminais, `::=` para produções e `|` para alternativas.
-
-As estratégias de análise sintática para GLCs incluem:
-
-*   **Top-Down (Descendente):** Constrói a árvore da raiz para as folhas. Pode ser com retrocesso (testa possibilidades) ou preditiva (usa lookahead, como LL(1)).
-    *   **LL(1):** Analisador preditivo que processa da esquerda para a direita, realiza derivação à esquerda e usa um símbolo de lookahead. Utiliza uma pilha explícita para gerenciar o processo de análise.
-*   **Bottom-Up (Redutiva):** Constrói a árvore das folhas para a raiz, substituindo lados direitos de produções por não-terminais (redução).
-
-## Conclusão
-
-O material fornecido oferece uma base sólida nos fundamentos de Linguagens Formais e Autômatos, abordando desde a definição de seus componentes básicos até a classificação de gramáticas e os mecanismos de reconhecimento e geração de linguagens. A compreensão desses conceitos é essencial para diversas áreas da computação, especialmente no desenvolvimento de compiladores, processamento de linguagens e inteligência artificial. A Hierarquia de Chomsky e os diferentes tipos de autômatos e gramáticas fornecem um arcabouço teórico para entender as capacidades e limitações de diferentes modelos computacionais. Os métodos de análise sintática, como os algoritmos Top-Down e Bottom-Up, são ferramentas práticas para a implementação desses conceitos em sistemas reais.
-
-
-
-## Resolução do Exercício de BNF
-
-### Gramática Fornecida
-A gramática em notação BNF é a seguinte:
-
-```bnf
-G5 ={{id}, {letter}, {digit}, {a, b, ..., z, A, B, ..., Z, 0, 1, ..., 9, _ }, P, <id>}
-Produções:
-<id> ::= <letter> | <id><letter> | <id><digit> | <id>_
-<letter> ::= a | b | ... | z | A | B | ... | Z
-<digit> ::= 0 | 1 | ... | 9
-```
-
-Analisando as regras de produção para `<id>`:
-*   Uma `<id>` deve começar com uma `<letter>`.
-*   Após o primeiro `<letter>`, uma `<id>` pode ser seguida por mais `<letter>`, `<digit>` ou `_`.
-*   Não pode começar com `<digit>` ou `_`.
-
-### Construção de Sentenças
-Vamos construir as sentenças `some_var1`, `X99` e `name_` usando a gramática fornecida.
-
-#### 1. `some_var1`
-Esta sentença é válida. A derivação pode ser feita da seguinte forma:
-
-```
-<id>
--> <letter> (s)
--> <id><letter> (so)
--> <id><letter> (som)
--> <id><letter> (some)
--> <id>_ (some_)
--> <id><letter> (some_v)
--> <id><letter> (some_va)
--> <id><letter> (some_var)
--> <id><digit> (some_var1)
-```
-
-#### 2. `X99`
-Esta sentença é válida. A derivação pode ser feita da seguinte forma:
-
-```
-<id>
--> <letter> (X)
--> <id><digit> (X9)
--> <id><digit> (X99)
-```
-
-#### 3. `name_`
-Esta sentença é válida. A derivação pode ser feita da seguinte forma:
-
-```
-<id>
--> <letter> (n)
--> <id><letter> (na)
--> <id><letter> (nam)
--> <id><letter> (name)
--> <id>_ (name_)
-```
-
-### Validação da Sentença `123abc`
-
-Vamos validar se a sentença `123abc` é válida de acordo com a gramática.
-
-De acordo com a regra de produção `<id> ::= <letter> | <id><letter> | <id><digit> | <id>_`, uma identificação (`<id>`) **deve começar com uma `<letter>`**.
-
-A sentença `123abc` começa com um dígito (`1`). Portanto, ela **não é válida** de acordo com a gramática fornecida, pois viola a regra de que um `<id>` deve iniciar com uma letra.
-
-### Conclusão do Exercício
-
-As sentenças `some_var1`, `X99` e `name_` podem ser construídas com sucesso a partir da gramática. No entanto, a sentença `123abc` não é válida, pois não começa com uma letra, o que é um requisito fundamental da gramática para a formação de um `<id>`.
-
+> *Este repositório é um guia para o estudo de Linguagens Formais e Autômatos, servindo como recurso de consulta e apoio ao aprendizado contínuo.*
