@@ -85,4 +85,4 @@ O estado final da computação (`q1`) **não** é um estado de aceitação (`qf`
 ---
 
 ## 📎 Materiais da Aula
--   [**PDF da Aula 3**](slides/Aula03_ER-AFD.pdf)
+-   [**PDF da Aula 3 - Expressões Regulares e Autômatos Finitos Determinísticos (AFD)**](slides/Aula03_ER-AFD.pdf)
