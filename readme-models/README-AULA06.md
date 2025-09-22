@@ -52,68 +52,34 @@ F → ( E ) | id <br>
 Para derivar a string `(id * id) + id`, seguimos as regras de produção a partir do símbolo inicial `E`.
 
 **Árvore de Derivação:**
+
 ```mermaid
 graph TD
-    subgraph Derivação
-        E_0[E]
-        E_0 --> E_1[E]
-        E_0 --> op1[+]
-        E_0 --> T_0[T]
-        
-        E_1 --> T_1[T]
-        
-        T_1 --> F_0[F]
-        
-        F_0 --> p_open[(]
-        F_0 --> E_2[E]
-        F_0 --> p_close[)]
-        
-        E_2 --> T_2[T]
-        E_2 --> op2[*]
-        E_2 --> F_1[F]
-        
-        T_2 --> F_2[F]
-        
-        F_2 --> id1[id]
-        
-        F_1 --> id2[id]
-        
-        T_0 --> F_3[F]
-        F_3 --> id3[id]
-        
-        style E_0 fill:#A0D2EB, stroke:#3A86FF
-        style E_1 fill:#A0D2EB, stroke:#3A86FF
-        style E_2 fill:#A0D2EB, stroke:#3A86FF
-        style T_0 fill:#A0D2EB, stroke:#3A86FF
-        style T_1 fill:#A0D2EB, stroke:#3A86FF
-        style T_2 fill:#A0D2EB, stroke:#3A86FF
-        style F_0 fill:#A0D2EB, stroke:#3A86FF
-        style F_1 fill:#A0D2EB, stroke:#3A86FF
-        style F_2 fill:#A0D2EB, stroke:#3A86FF
-        style F_3 fill:#A0D2EB, stroke:#3A86FF
-        style id1 fill:#EBEB9B, stroke:#F7C852
-        style id2 fill:#EBEB9B, stroke:#F7C852
-        style id3 fill:#EBEB9B, stroke:#F7C852
-        style op1 fill:#EBEB9B, stroke:#F7C852
-        style op2 fill:#EBEB9B, stroke:#F7C852
-        style p_open fill:#EBEB9B, stroke:#F7C852
-        style p_close fill:#EBEB9B, stroke:#F7C852
-        
-        E_0 -.-> E_1
-        E_0 -.-> T_0
-        E_1 -.-> T_1
-        T_1 -.-> F_0
-        F_0 -.-> p_open
-        F_0 -.-> E_2
-        F_0 -.-> p_close
-        E_2 -.-> T_2
-        E_2 -.-> F_1
-        T_2 -.-> F_2
-        F_2 -.-> id1
-        F_1 -.-> id2
-        T_0 -.-> F_3
-        F_3 -.-> id3
-    end
+    E((E)) --> E_plus_T["E + T"]
+    E_plus_T --> E_left["E"]
+    E_plus_T --> plus["+"]
+    E_plus_T --> T_right["T"]
+
+    E_left --> T_left["T"]
+    T_left --> F_left["F"]
+    F_left --> paren_expr["( E )"]
+    paren_expr --> open["("]
+    paren_expr --> E_inside["E"]
+    paren_expr --> close[")"]
+
+    E_inside --> T_star_F["T * F"]
+    T_star_F --> T_inside["T"]
+    T_star_F --> star["*"]
+    T_star_F --> F_inside["F"]
+
+    T_inside --> F_inside_id["F"]
+    F_inside_id --> id_1["id"]
+
+    F_inside --> id_2["id"]
+
+    T_right --> F_right["F"]
+    F_right --> id_3["id"]
 ```
+
 ## 📎 Materiais da Aula
 -   [**PDF da Aula 6 - Gramáticas Livres de Contexto (GLC) e Análise Sintática**](slides/Aula06_GLC.pdf)
