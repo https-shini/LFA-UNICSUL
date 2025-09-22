@@ -116,4 +116,4 @@ graph TD
     end
 ```
 ## 📎 Materiais da Aula
--   [**PDF da Aula 6 - GLC**](slides/Aula06_GLC.pdf)
+-   [**PDF da Aula 6 - Gramáticas Livres de Contexto (GLC) e Análise Sintática**](slides/Aula06_GLC.pdf)
