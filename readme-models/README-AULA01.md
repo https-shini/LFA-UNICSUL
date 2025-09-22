@@ -83,4 +83,5 @@ Aqui está a validação das 5 sentenças propostas, com a análise de cada uma:
 ---
 
 ## 📎 Materiais da Aula
--   [**PDF da Aula 1**](slides/Aula01_Apresentacao_LFA.pdf)
+-   [**PDF da Aula 1 - Apresentação e Visão Geral**](slides/Aula01_Apresentacao_LFA.pdf)
+
